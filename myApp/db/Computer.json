@@ -1,0 +1,50 @@
+{
+    "result":{
+        "total": 6,
+        "data": [
+            {
+                "productId": 150642571432850,
+                "salePrice": 5999.00,
+                "productName": "笔记本",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aba7cb25aa184b34e4affb3672bd28c9.jpg?w=1708&h=868"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 5999.00,
+                "productName": "笔记本",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aba7cb25aa184b34e4affb3672bd28c9.jpg?w=1708&h=868"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 5999.00,
+                "productName": "笔记本",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aba7cb25aa184b34e4affb3672bd28c9.jpg?w=1708&h=868"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 5999.00,
+                "productName": "笔记本",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aba7cb25aa184b34e4affb3672bd28c9.jpg?w=1708&h=868"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 5999.00,
+                "productName": "笔记本",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aba7cb25aa184b34e4affb3672bd28c9.jpg?w=1708&h=868"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 5999.00,
+                "productName": "笔记本",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aba7cb25aa184b34e4affb3672bd28c9.jpg?w=1708&h=868"
+            }
+        ]
+    } 
+    
+}

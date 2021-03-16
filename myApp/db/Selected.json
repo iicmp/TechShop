@@ -1,0 +1,44 @@
+{
+
+    "result": {
+        "total": 5,
+        "data": [
+            {
+                "productId": 150642571432850,
+                "salePrice": 5999.00,
+                "productName": "笔记本",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/aba7cb25aa184b34e4affb3672bd28c9.jpg?w=1708&h=868"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "智能门锁",
+                "subTitle": "智能门锁，绝对安全",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1600658170.087047.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 1999.00,
+                "productName": "智能手机",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1615342326.05373482.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "超大屏电视",
+                "subTitle": "无感观看，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1614051032.3568739.jpg"
+            }
+           
+        ]
+    }
+}

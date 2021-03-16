@@ -12,14 +12,53 @@ app.all('*', function(req, res, next) {
     next();
 });
 
-app.get('/',(req,res)=>{
+app.get('/Selected',(req,res)=>{
 
-    fs.readFile('./db/home.json','utf8',(err,data)=>{
+    fs.readFile('./db/Selected.json','utf8',(err,data)=>{
         if(!err){
             res.json(JSON.parse(data));
         } 
     })
-   
+})
+app.get('/Computer',(req,res)=>{
+
+    fs.readFile('./db/Computer.json','utf8',(err,data)=>{
+        if(!err){
+            res.json(JSON.parse(data));
+        } 
+    })
+})
+app.get('/Hardware',(req,res)=>{
+
+    fs.readFile('./db/Hardware.json','utf8',(err,data)=>{
+        if(!err){
+            res.json(JSON.parse(data));
+        } 
+    })
+})
+app.get('/Netdevice',(req,res)=>{
+
+    fs.readFile('./db/Netdevice.json','utf8',(err,data)=>{
+        if(!err){
+            res.json(JSON.parse(data));
+        } 
+    })
+})
+app.get('/Phone',(req,res)=>{
+
+    fs.readFile('./db/Phone.json','utf8',(err,data)=>{
+        if(!err){
+            res.json(JSON.parse(data));
+        } 
+    })
+})
+app.get('/Television',(req,res)=>{
+
+    fs.readFile('./db/Television.json','utf8',(err,data)=>{
+        if(!err){
+            res.json(JSON.parse(data));
+        } 
+    })
 })
 
 

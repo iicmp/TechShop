@@ -1,0 +1,71 @@
+{
+
+    "result": {
+        "total": 9,
+        "data": [
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "小米路由器",
+                "subTitle": "无感连接，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609124079.46473455.jpg"
+            }
+        ]
+    }
+}

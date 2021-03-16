@@ -1,0 +1,57 @@
+{
+
+    "result": {
+        "total": 7,
+        "data": [
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "智能门锁",
+                "subTitle": "智能门锁，绝对安全",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1600658170.087047.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "智能门锁",
+                "subTitle": "智能门锁，绝对安全",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1600658170.087047.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "智能门锁",
+                "subTitle": "智能门锁，绝对安全",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1600658170.087047.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "智能门锁",
+                "subTitle": "智能门锁，绝对安全",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1600658170.087047.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "智能门锁",
+                "subTitle": "智能门锁，绝对安全",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1600658170.087047.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "智能门锁",
+                "subTitle": "智能门锁，绝对安全",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1600658170.087047.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 199.00,
+                "productName": "智能门锁",
+                "subTitle": "智能门锁，绝对安全",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1600658170.087047.jpg"
+            }
+        ]
+    }
+}

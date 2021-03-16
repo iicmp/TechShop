@@ -1,0 +1,50 @@
+{
+
+    "result": {
+        "total": 5,
+        "data": [
+            {
+                "productId": 150642571432850,
+                "salePrice": 1999.00,
+                "productName": "智能手机",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1615342326.05373482.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 1999.00,
+                "productName": "智能手机",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1615342326.05373482.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 1999.00,
+                "productName": "智能手机",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1615342326.05373482.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 1999.00,
+                "productName": "智能手机",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1615342326.05373482.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 1999.00,
+                "productName": "智能手机",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1615342326.05373482.jpg"
+            },
+            {
+                "productId": 150642571432850,
+                "salePrice": 1999.00,
+                "productName": "智能手机",
+                "subTitle": "无感佩戴，一切变得简单",
+                "productImageBig": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1615342326.05373482.jpg"
+            }
+        ]
+    }
+}
