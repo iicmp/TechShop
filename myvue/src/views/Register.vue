@@ -3,7 +3,7 @@
         <div class="logGet">
             <!-- 头部提示信息 -->
             <div class="logD logDtip">
-                <p class="p1">登录</p>
+                <p class="p1">注册</p>
             </div>
             <!-- 输入框 -->
             <div class="lgD">
@@ -14,12 +14,14 @@
                 <img src="@/assets/password.png" width="20" height="20" alt="" />
                 <input type="text" placeholder="输入用户密码" />
             </div>
+            <div class="lgD">
+                <img src="@/assets/password.png" width="20" height="20" alt="" />
+                <input type="text" placeholder="确认密码" />
+            </div>
             <div class="logC">
-                <a><button @click="login">登 录</button></a>
+                <a><button @click="register">注 册</button></a>
             </div>
-            <div class="register">
-                <a @click="register">点此注册</a>
-            </div>
+            
         </div>
     </div>
 </template>
@@ -27,15 +29,13 @@
 <script>
 
     export default {
-        name:'Login',
+        name:'Resgister',
         methods: {
-            login() {
+            register() {
 　　　　　　　　　　// 假设登陆成功，则跳转到 index 组件
                 this.$router.replace('/Home');
             },
-            register(){
-                this.$router.replace('/Register');
-            }
+            
         }
     }
 </script>
@@ -56,7 +56,7 @@
         position: relative;
     }
     #wrap .logGet {
-        height: 408px;
+        height: 470px;
         width: 368px;
         position: absolute;
         background-color: rgba(255,255,255,0.85);
@@ -120,17 +120,7 @@
         margin-left: auto;
     }
 
-    .register{
-        position: absolute;
-        right:23px;
-        margin-top: 20px;
-        font-size: 14px;
-        color:#35495e;
-    }
-    .register:hover{
-        cursor: pointer;
-        color:#267b85;
-    }
+
 
     // .title {
     //     font-family: "宋体";

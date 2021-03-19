@@ -1,7 +1,7 @@
 <template>
 <div class="home">
     <Top-bar></Top-bar>
-    <Nav-bar></Nav-bar>
+    <Nav-content></Nav-content>
     
 </div>  
 </template>
@@ -9,14 +9,14 @@
 
 <script>
 import TopBar from '@/components/Home/TopBar';
-import NavBar from '@/components/Home/NavBar';
+import NavContent from '@/components/Home/NavContent';
 
 export default{
     name:'Home',
 
     components:{
         TopBar,
-        NavBar
+        NavContent
     }
 }
 // export default {
