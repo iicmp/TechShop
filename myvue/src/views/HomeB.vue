@@ -2,6 +2,8 @@
 <div class="home">
     <Top-bar></Top-bar>
     <Nav-content></Nav-content>
+     <Bottom-bar></Bottom-bar>
+
     
 </div>  
 </template>
@@ -10,13 +12,15 @@
 <script>
 import TopBar from '@/components/Home/TopBar';
 import NavContent from '@/components/Home/HomeB/NavContent.vue';
+import BottomBar from '@/components/Home/BottomBar'
 
 export default{
     name:'Home',
 
     components:{
         TopBar,
-        NavContent
+        NavContent,
+        BottomBar
     }
 }
 // export default {

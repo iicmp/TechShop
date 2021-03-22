@@ -32,7 +32,6 @@
 export default {
     data(){
         return{
-           
             goods:[],
             routeStr:["/Phone","/Television","/Computer","/Hardware","/Netdevice"],
         }
@@ -58,7 +57,7 @@ export default {
                     break;
             }
             let resData = res.data;
-            this.goods = resData.result.data;
+            this.goods = resData.result.data;    
         } catch (error) {
             console.log(error.message);
         }
@@ -129,6 +128,7 @@ export default {
         margin-top:100px;
         border-top: 3px solid #77befc;
         padding-top:15px;
+        margin-bottom: 500px;
         ul,li{
             padding:0;
             margin:0;

@@ -1,6 +1,6 @@
 <template>
     <div class="phone">
-        <Slides></Slides>
+        <!-- <Slides :index="1"></Slides> -->
         <all-goods :num="1"></all-goods>
        
     </div>

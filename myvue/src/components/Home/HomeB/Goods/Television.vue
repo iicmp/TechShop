@@ -1,6 +1,6 @@
 <template>
     <div class="Television">
-        <Slides></Slides>
+        <!-- <Slides></Slides> -->
         <all-goods :num="2"></all-goods>
        
     </div>

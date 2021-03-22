@@ -6,10 +6,10 @@ import Register from '@/views/Register.vue'
 import ShopCart from '@/views/ShopCart.vue'
 
 import Computer from '@/components/Home/HomeB/Goods/Computer.vue'
-import HardWare from '@/components/Home/HomeB/Goods/HardWare'
-import NetDevice from '@/components/Home/HomeB/Goods/NetDevice'
-import Phone from '@/components/Home/HomeB/Goods/Phone'
-import Television from '@/components/Home/HomeB/Goods/Television'
+import HardWare from '@/components/Home/HomeB/Goods/HardWare.vue'
+import NetDevice from '@/components/Home/HomeB/Goods/NetDevice.vue'
+import Phone from '@/components/Home/HomeB/Goods/Phone.vue'
+import Television from '@/components/Home/HomeB/Goods/Television.vue'
 
 
 const routes = [
@@ -32,6 +32,18 @@ const routes = [
             component:Computer
         },
         {
+            path:'Phone',
+            component:Phone
+        },
+        {
+            path:'Television',
+            component:Television
+        },
+        {
+            path:'Computer',
+            component:Computer
+        },
+        {
             path:'HardWare',
             component:HardWare
         },
@@ -39,14 +51,7 @@ const routes = [
             path:'NetDevice',
             component:NetDevice
         },
-        {
-            path:'Phone',
-            component:Phone
-        },
-        {
-            path:'Television',
-            component:Television
-        }
+        
     ]
   },
   {
