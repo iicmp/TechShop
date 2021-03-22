@@ -1,34 +1,23 @@
 <template>
-  <div class="television">
-      全部电视
-  </div>
+    <div class="Television">
+        <Slides></Slides>
+        <all-goods :num="2"></all-goods>
+       
+    </div>
 </template>
 
-<script>
+<script> 
+import Slides from "./common/Slides.vue";
+import AllGoods from './common/AllGoods.vue';
 export default {
-
-    data() {
-        return {
-            routeStr:["/Phone","/Television","/Computer","/Hardware","/Netdevice"],
-            
-            
-        };
-    },
-
-    async created() {
-        try {
-            const res = await this.$http.get(this.rou);
-            console.log(res);
-            // let homeData = res.data;
-            // this.goods = homeData.result.data;
-        } catch (error) {
-            console.log(error.message);
-        }
-    },
-
-}
+    name: "Televisiono",
+    components: {
+        Slides,
+        AllGoods
+    },   
+};
 </script>
 
-<style>
+<style scoped lang="scss">
 
 </style>

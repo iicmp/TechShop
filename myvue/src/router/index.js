@@ -11,6 +11,7 @@ import NetDevice from '@/components/Home/HomeB/Goods/NetDevice'
 import Phone from '@/components/Home/HomeB/Goods/Phone'
 import Television from '@/components/Home/HomeB/Goods/Television'
 
+
 const routes = [
   {
     path: '/',
@@ -43,7 +44,7 @@ const routes = [
             component:Phone
         },
         {
-            path:'Television/:routee',
+            path:'Television',
             component:Television
         }
     ]

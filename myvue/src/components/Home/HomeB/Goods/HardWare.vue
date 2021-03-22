@@ -1,15 +1,23 @@
 <template>
-  <div class="hardware">
-      全部智能硬件
-  </div>
+    <div class="hardware">
+        <Slides></Slides>
+        <all-goods :num="4"></all-goods>
+       
+    </div>
 </template>
 
-<script>
+<script> 
+import Slides from "./common/Slides.vue";
+import AllGoods from './common/AllGoods.vue';
 export default {
-
-}
+    name: "HardWare",
+    components: {
+        Slides,
+        AllGoods
+    },   
+};
 </script>
 
-<style>
+<style scoped lang="scss">
 
 </style>
