@@ -1,6 +1,7 @@
 <template>
     <div class="hardware">
-        <Slides></Slides>
+        
+        <Slides :index="4"></Slides>
         <all-goods :num="4"></all-goods>
        
     </div>
@@ -18,6 +19,6 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 </style>

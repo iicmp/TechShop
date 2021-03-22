@@ -4,16 +4,24 @@
             <div class="titlebar">精选</div>
             <div class="pic1">
                 <img :src="goods[0] && goods[0].productImageBig" alt="" />
-                <p class="price">￥{{ goods[0] && goods[0].salePrice }}</p>
-                <p class="name">{{ goods[0] && goods[0].productName }}</p>
-                <p class="title">{{ goods[0] && goods[0].subTitle }}</p>
+                <div @mouseenter.native="showBtn" @mouseleave.native="hideBtn">
+                    <p class="price">￥{{ goods[0] && goods[0].salePrice }}</p>
+                    <p class="name">{{ goods[0] && goods[0].productName }}</p>
+                    <p class="title">{{ goods[0] && goods[0].subTitle }}</p>
+                </div>
+                <button>加入购物车</button>
+                
             </div>
             <div class="pic2">
-                <img :src="goods[0] && goods[1].productImageBig" alt="" />
-                <p class="price">￥{{ goods[0] && goods[1].salePrice }}</p>
-                <p class="name">{{ goods[0] && goods[1].productName }}</p>
-                <p class="title">{{ goods[0] && goods[1].subTitle }}</p>
+                 <img :src="goods[0] && goods[1].productImageBig" alt="" />
+                <div @mouseover.native="showBtn" @mouseout.native="hideBtn">
+                    <p class="price">￥{{ goods[0] && goods[1].salePrice }}</p>
+                    <p class="name">{{ goods[0] && goods[1].productName }}</p>
+                    <p class="title">{{ goods[0] && goods[1].subTitle }}</p>
+                </div>
+                 <button>加入购物车</button> 
             </div>
+           
         </div>
         <div class="block2">
             <ul>
@@ -30,32 +38,29 @@
 
 <script>
 export default {
+    props:['num'],
     data(){
         return{
+            
             goods:[],
             routeStr:["/Phone","/Television","/Computer","/Hardware","/Netdevice"],
         }
     },
-    props:['num'],
+    methods:{
+        showBtn(e){
+            e.currentTarget.style.display="none";
+            e.currentTarget.nextElementSibling.style.display="block";
+        },
+        hideBtn(e){
+            e.currentTarget.style.display="block";
+            e.currentTarget.nextElementSibling.style.display="none";
+        }
+
+    },
+    
     async created() {
         try {
-            let res={};
-            switch(this.num){
-                case 1:
-                     res = await this.$http.get(this.routeStr[0]);
-                case 2:
-                     res = await this.$http.get(this.routeStr[1]);
-                    break;
-                case 3:
-                     res = await this.$http.get(this.routeStr[2]);
-                    break;
-                case 4:
-                     res = await this.$http.get(this.routeStr[3]);
-                    break;
-                case 5:
-                     res = await this.$http.get(this.routeStr[4]);
-                    break;
-            }
+            const res = await this.$http.get(this.routeStr[this.num - 1])
             let resData = res.data;
             this.goods = resData.result.data;    
         } catch (error) {
@@ -81,10 +86,22 @@ export default {
 
         }
 
+        button{
+                display:none;
+                width:200px;
+                height:50px;
+                border:1px #76bdfb solid;
+                box-shadow:1px 1px 5px #9adafd, -1px -1px 5px #9adafd;
+                background-color: #76bdfb;
+                color:#fff;
+                font-size: 20px;
+                margin:100px auto;
+            }
         .pic1{
             float:left;
+            
         }
-        .pic1{
+        .pic2{
             float:right;
         }
         .pic1,.pic2{
@@ -128,7 +145,7 @@ export default {
         margin-top:100px;
         border-top: 3px solid #77befc;
         padding-top:15px;
-        margin-bottom: 500px;
+        
         ul,li{
             padding:0;
             margin:0;

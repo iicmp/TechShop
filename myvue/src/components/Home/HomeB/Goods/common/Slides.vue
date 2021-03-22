@@ -1,15 +1,15 @@
 <template>
     <div class="container">
-        <ul :style="isLast?'containerStyleLast':'containerStyle'" >
-            <li >
+        <ul :style='containerStyle'>
+            <!-- <li >
                 <img :src="slides[4]" alt="" />
-            </li>
+            </li> -->
             <li v-for="(item, index) in slides" :key="index">
                 <img :src="item" alt="" />
             </li>
-            <li >
+            <!-- <li >
                 <img :src="slides[1]" alt="" />
-            </li>
+            </li> -->
         </ul>
         <span class="iconfont icon-left-line" @click="move(1300, +1)"></span>
         <span class="iconfont icon-right-line" @click="move(1300, -1)"></span>
@@ -24,48 +24,47 @@ let img4 = require("@/assets/slides/s4.png");
 let img5 = require("@/assets/slides/s5.png"); 
 export default {
     name: "Slides",
+    props:['index'],
     data() {
         return {
             slides: [img1, img2, img3, img4, img5],
             currentIndex: 1,
-            distance: -1300,
-            isLast:false,
+            distance: 0,
+            // isLast:false,
         };
     },
     
     computed: {
-        isLastt(){
-            return
-                this.isLast
-               
-          
-        },
+        // isLastt(){
+        //     return
+        //         this.isLast
+        // },
         containerStyle() {
             return {
                 transform: `translate3d(${this.distance}px, 0, 0)`,
-                transition:`transform 2s ease`,
+                // transition:`transform 2s ease`,
             };
         },
-        containerStyleLast() {
-            return {
-                transform: `translate3d(${this.distance}px, 0, 0)`,
-                transition:`transform 0.01s ease`,
-            };
-        },
+        // containerStyleLast() {
+        //     return {
+        //         transform: `translate3d(${this.distance}px, 0, 0)`,
+        //         transition:`transform 0.01s ease`,
+        //     };
+        // },
     },
     methods: {
        move(offset, direction) {
             this.distance += offset * direction;
-            this.isLast=false;
-            if (this.distance > -7800) {
+            // this.isLast=false;
+            if (this.distance < -5200) {
                 // this.isLast=true;
-                this.distance = -1300;
+                this.distance = 0;
                 // this.isLast=false;
                 
             }
-            if (this.distance == 0) {
+            if (this.distance > 0) {
                 // this.isLast=true;
-                this.distance = -6500;
+                this.distance = -5200;
                 // this.isLast=true;
 
                 
@@ -77,7 +76,7 @@ export default {
         var that=this;
         setInterval(function(){
             that.move(1300,-1);
-        },5000);
+        },3000);
        
 
     }
@@ -100,7 +99,7 @@ li {
     overflow: hidden;
     position: relative;
     ul {
-        width: 9100px;
+        width: 6500px;
         height: 505px;
         li {
             float: left;

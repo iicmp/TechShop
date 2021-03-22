@@ -119,32 +119,4 @@
         margin-bottom: 0px;
         margin-left: auto;
     }
-
-
-
-    // .title {
-    //     font-family: "宋体";
-    //     color: #FFFFFF;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     /* 使用css3的transform来实现 */
-    //     font-size: 36px;
-    //     height: 40px;
-    //     width: 30%;
-    // }
-
-    // .copyright {
-    //     font-family: "宋体";
-    //     color: #FFFFFF;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     /* 使用css3的transform来实现 */
-    //     height: 60px;
-    //     width: 40%;
-    //     text-align: center;
-    // }
 </style>

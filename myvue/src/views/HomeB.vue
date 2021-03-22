@@ -12,7 +12,7 @@
 <script>
 import TopBar from '@/components/Home/TopBar';
 import NavContent from '@/components/Home/HomeB/NavContent.vue';
-import BottomBar from '@/components/Home/BottomBar'
+import BottomBar from '@/components/Home/BottomBar/FootB.vue'
 
 export default{
     name:'Home',

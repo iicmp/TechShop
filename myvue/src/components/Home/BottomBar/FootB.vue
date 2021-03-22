@@ -66,7 +66,8 @@ export default {
 <style scoped lang="scss">
 .foot {
     position: absolute;
-    top: 3000px;
+    top: 3200px;
+    
     width: 100%;
     background-color: #fff;
     .hline {
@@ -92,6 +93,10 @@ export default {
                     display:inline-block;
                     width:200px; 
                     text-align: center;
+                }
+                a:hover{
+                    cursor:pointer;
+                    color:#76bdfb;
                 }
             }
             

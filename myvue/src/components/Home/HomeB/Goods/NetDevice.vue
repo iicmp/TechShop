@@ -1,6 +1,6 @@
 <template>
     <div class="netdevice">
-        <Slides></Slides>
+        <Slides :index="5"></Slides>
         <all-goods :num="5"></all-goods>
        
     </div>

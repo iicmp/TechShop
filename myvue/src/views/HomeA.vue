@@ -10,7 +10,7 @@
 <script>
 import TopBar from "@/components/Home/TopBar";
 import Selected from "@/components/Home/HomeA/Selected.vue"
-import BottomBar from '@/components/Home/BottomBar'
+import BottomBar from '@/components/Home/BottomBar/FootA.vue'
 export default {
     name: "HomeA",
     components: {

@@ -1,6 +1,6 @@
 <template>
     <div class="computer">
-        <Slides></Slides>
+        <Slides :index="3"></Slides>
         <all-goods :num="3"></all-goods>
        
     </div>
