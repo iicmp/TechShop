@@ -2,14 +2,14 @@
   <div class="navContent">
       <div class="nav">
             <a class="homeA" @click="homeA">home</a> 
-            <router-link class="phone" to="/HomeB/Phone">手机</router-link>
-            <router-link class="television" to="/HomeB/Television">电视</router-link>
+            <router-link class="phone" to="/HomeB/Phone/">手机</router-link>
+            <router-link class="television" to="/HomeB/Television/1">电视</router-link>
             <router-link class="computer" to="/HomeB/Computer">电脑</router-link>
             <router-link class="hardware" to="/HomeB/HardWare">智能硬件</router-link>
             <router-link class="netdevice" to="/HomeB/NetDevice">网络设备</router-link>
             <input type="text" class="search-text" placeholder="搜索">
             <button class="search-button">
-                <span>search</span>
+                <span></span>
             </button>
       </div>
       <router-view/>
@@ -56,11 +56,11 @@ export default {
                 color: #76bdfb;
             }
             .search-text {
-                margin-left: 80px;
+                margin-left: 110px;
                 width: 200px;
                 height: 43px;
                 border-radius: 3px 0 0 3px;
-                border: 1px #2c3e50 solid;
+                border: 1px #242933 solid;
                 padding: 0;
                 vertical-align: middle;
             }
@@ -71,10 +71,14 @@ export default {
                 height: 45px;
                 margin-left: -1px; 
                 border-radius: 0 3px 3px 0;
-                border: 1px #2c3e50 solid;
-                background-color: #2c3e50;
+                border: 1px #242933 solid;
+                background-color: #242933;
                 color:#fff;
                 vertical-align: middle;
+                background-image: url('~@/assets/search.png');
+                background-size: 30px 30px;
+                background-position: center;
+                background-repeat: no-repeat;
             }
         }
 

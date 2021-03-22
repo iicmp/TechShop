@@ -9,7 +9,7 @@
 
 <script>
 import TopBar from '@/components/Home/TopBar';
-import NavContent from '@/components/Home/NavContent';
+import NavContent from '@/components/Home/HomeB/NavContent.vue';
 
 export default{
     name:'Home',
@@ -45,7 +45,10 @@ export default{
 
 
 <style scoped lang="scss">
+.home{
+        // background-color: #dffdff;
 
+}
 
 
 </style>

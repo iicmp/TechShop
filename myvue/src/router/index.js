@@ -5,11 +5,11 @@ import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import ShopCart from '@/views/ShopCart.vue'
 
-import Computer from '@/components/Home/NavContent/Goods/Computer.vue'
-import HardWare from '@/components/Home/NavContent/Goods/HardWare'
-import NetDevice from '@/components/Home/NavContent/Goods/NetDevice'
-import Phone from '@/components/Home/NavContent/Goods/Phone'
-import Television from '@/components/Home/NavContent/Goods/Television'
+import Computer from '@/components/Home/HomeB/Goods/Computer.vue'
+import HardWare from '@/components/Home/HomeB/Goods/HardWare'
+import NetDevice from '@/components/Home/HomeB/Goods/NetDevice'
+import Phone from '@/components/Home/HomeB/Goods/Phone'
+import Television from '@/components/Home/HomeB/Goods/Television'
 
 const routes = [
   {
@@ -43,7 +43,7 @@ const routes = [
             component:Phone
         },
         {
-            path:'Television',
+            path:'Television/:routee',
             component:Television
         }
     ]
