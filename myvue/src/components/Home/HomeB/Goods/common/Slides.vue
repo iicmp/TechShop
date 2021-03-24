@@ -28,9 +28,9 @@ export default {
     data() {
         return {
             slides: [img1, img2, img3, img4, img5],
-            currentIndex: 1,
-            distance: 0,
-            // isLast:false,
+            
+            distance: (this.index-1)*(-1300),
+           
         };
     },
     
@@ -76,7 +76,7 @@ export default {
         var that=this;
         setInterval(function(){
             that.move(1300,-1);
-        },3000);
+        },2000);
        
 
     }
