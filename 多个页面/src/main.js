@@ -15,7 +15,7 @@ import axios from 'axios';
 // Vue.prototype.$http=axios;
 let app = createApp(App)// 获取应用实例
 app.config.globalProperties.$http=axios
-axios.defaults.baseURL='http://59.110.225.36:3000';
+axios.defaults.baseURL='59.110.225.36:3000';
 
 app.use(ElementPlus)
 app.use(store).use(router).mount('#app')

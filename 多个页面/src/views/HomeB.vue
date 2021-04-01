@@ -1,9 +1,8 @@
 <template>
 <div class="home">
     <Top-bar></Top-bar>
-    <Nav-content ></Nav-content>
-
-    <Bottom-bar></Bottom-bar>
+    <Nav-content></Nav-content>
+     <Bottom-bar></Bottom-bar>
 
     
 </div>  

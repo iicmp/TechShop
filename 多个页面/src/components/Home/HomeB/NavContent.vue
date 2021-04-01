@@ -1,7 +1,7 @@
 <template>
   <div class="navContent">
       <div class="nav">
-            <a class="homeA">home</a> 
+            <a class="homeA" @click="homeA">home</a> 
             <router-link class="phone" to="/HomeB/Phone">手机</router-link>
             <router-link class="television" to="/HomeB/Television">电视</router-link>
             <router-link class="computer" to="/HomeB/Computer">电脑</router-link>
@@ -20,9 +20,9 @@
 export default {
     name:'NavContent',
     methods:{
-        // homeA(){
-        //     this.$router.replace('/homeA');
-        // }
+        homeA(){
+            this.$router.replace('/homeA');
+        }
     }
 
 }

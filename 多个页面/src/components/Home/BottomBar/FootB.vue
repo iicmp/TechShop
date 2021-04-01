@@ -66,7 +66,7 @@ export default {
 <style scoped lang="scss">
 .foot {
     position: absolute;
-    top: 3300px;
+    top: 3200px;
     
     width: 100%;
     background-color: #fff;

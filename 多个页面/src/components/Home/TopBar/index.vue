@@ -1,12 +1,8 @@
 <template>
     <div class="top">
-        <!-- <span @click="login">登陆</span>
+        <span @click="login">登陆</span>
         <span @click="register">注册</span>
-        <span @click="shopcart">购物车</span> -->
-
-        <span >登陆</span>
-        <span>注册</span>
-        <span >购物车</span>
+        <span @click="shopcart">购物车</span>
     </div>
 </template>
 

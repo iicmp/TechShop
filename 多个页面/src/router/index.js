@@ -1,6 +1,9 @@
 import { createRouter,createWebHashHistory } from 'vue-router'
+import HomeA from '@/views/HomeA.vue'
 import HomeB from '@/views/HomeB.vue'
-
+import Login from '@/views/Login.vue'
+import Register from '@/views/Register.vue'
+import ShopCart from '@/views/ShopCart.vue'
 
 import Computer from '@/components/Home/HomeB/Goods/Computer.vue'
 import HardWare from '@/components/Home/HomeB/Goods/HardWare.vue'
@@ -12,13 +15,17 @@ import Television from '@/components/Home/HomeB/Goods/Television.vue'
 const routes = [
   {
     path: '/',
-    redirect:'/HomeB',
+    redirect:'/HomeA',
+  },
+  {
+      path:'/HomeA',
+      name:HomeA,
+      component:HomeA
   },
   {
     path: '/HomeB',
     name: 'HomeB',
     component: HomeB,
-    redirect:'/HomeB/Phone',
     children:[
         {
             path:'Computer',
@@ -47,26 +54,26 @@ const routes = [
         
     ]
   },
-//   {
-//     path: '/ShopCart',
-//     name: 'ShopCart',
-//     component: ShopCart,
-//   },
-//   {
-//     path: '/Login',
-//     name: 'Login',
-//     component: Login
-//   },
-//   {
-//     path: '/Register',
-//     name: 'Register',
-//     component: Register
-//   },
+  {
+    path: '/ShopCart',
+    name: 'ShopCart',
+    component: ShopCart,
+  },
+  {
+    path: '/Login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/Register',
+    name: 'Register',
+    component: Register
+  },
  
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 })
 

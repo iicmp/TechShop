@@ -1,21 +1,18 @@
 <template>
     <div class="container">
         <ul :style='containerStyle'>
+            <!-- <li >
+                <img :src="slides[4]" alt="" />
+            </li> -->
             <li v-for="(item, index) in slides" :key="index">
                 <img :src="item" alt="" />
             </li>
+            <!-- <li >
+                <img :src="slides[1]" alt="" />
+            </li> -->
         </ul>
         <span class="iconfont icon-left-line" @click="move(1300, +1)"></span>
         <span class="iconfont icon-right-line" @click="move(1300, -1)"></span>
-        <div class="dots">
-            <a href="javscript:;" @click="shift(0)" :class="{'dotClass':currentDistance==0}"></a>
-            <a href="javscript:;" @click="shift(-1300)" :class="{'dotClass':currentDistance==-1300}"></a>
-            <a href="javscript:;" @click="shift(-2600)" :class="{'dotClass':currentDistance==-2600}"></a>
-            <a href="javscript:;" @click="shift(-3900)" :class="{'dotClass':currentDistance==-3900}"></a>
-            <a href="javscript:;" @click="shift(-5200)" :class="{'dotClass':currentDistance==-5200}"></a>
-        </div>
-        
-
     </div>
 </template>
 
@@ -31,41 +28,55 @@ export default {
     data() {
         return {
             slides: [img1, img2, img3, img4, img5],
-            distance: (this.index-1)*(-1300),  
+            
+            distance: (this.index-1)*(-1300),
+           
         };
     },
     
     computed: {
+        // isLastt(){
+        //     return
+        //         this.isLast
+        // },
         containerStyle() {
             return {
-                transform: `translate3d(${this.distance}px, 0, 0)`,    
+                transform: `translate3d(${this.distance}px, 0, 0)`,
+                // transition:`transform 2s ease`,
             };
         },
-        currentDistance(){
-            return this.distance       
-        }
+        // containerStyleLast() {
+        //     return {
+        //         transform: `translate3d(${this.distance}px, 0, 0)`,
+        //         transition:`transform 0.01s ease`,
+        //     };
+        // },
     },
     methods: {
        move(offset, direction) {
             this.distance += offset * direction;
+            // this.isLast=false;
             if (this.distance < -5200) {
-                this.distance = 0;     
+                // this.isLast=true;
+                this.distance = 0;
+                // this.isLast=false;
+                
             }
             if (this.distance > 0) {
-                this.distance = -5200;    
-            }    
+                // this.isLast=true;
+                this.distance = -5200;
+                // this.isLast=true;
+
+                
+            }
+            
         },
-        shift(dstan){
-            this.distance=dstan;
-        }
     },
     mounted(){
         var that=this;
         setInterval(function(){
             that.move(1300,-1);
-            
         },2000);
-
        
 
     }
@@ -109,25 +120,6 @@ li {
     }
     .icon-left-line {
         left: 0;
-    }
-    .dots{
-        position:absolute;
-        top:480px;
-        left:550px;
-    }
-    .dotClass{
-        background-color: #9ddefe;
-    }
-    a{
-        display:inline-block;
-        width:15px;
-        height:15px;
-        border-radius:7.5px;
-        background-color: rgba(255, 255, 255, 0.5);
-        margin-left:10px;
-    }
-    a:hover{
-        background-color: #9ddefe;
     }
 }
 </style>
