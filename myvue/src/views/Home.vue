@@ -1,5 +1,8 @@
 <template>
 <div class="home">
+    <div class="topbgc">
+
+    </div>
     <Top-bar></Top-bar>
     <Center-block ></Center-block>
     <Bottom-bar></Bottom-bar>
@@ -24,31 +27,18 @@ export default{
        
     }
 }
-// export default {
-//     name: 'home',
 
-//     data(){
-//         return{
-//             banner:[],
-            
-//         }
-//     },
-
-//     async created(){
-//         try {
-//             const res=await this.$http.get('/');
-//             let homeData=res.data;
-//             this.banner=homeData.result.data;
-            
-//         } catch (error) {
-//             console.log(error.message)
-//         }
-//     }
- 
-// }
 </script>
 
 
 <style scoped lang="scss">
 
+.topbgc{
+    width:1920px;
+    height:40px;
+    position:absolute;
+    top:0px;
+    background-color: #242933;
+    z-index: -1;
+}
 </style>

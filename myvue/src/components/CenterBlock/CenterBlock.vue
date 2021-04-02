@@ -30,6 +30,7 @@ export default {
 .CenterBlock{
     width:1300px;
     margin:auto;
+    
         .nav {
             height:70px;
             a {
