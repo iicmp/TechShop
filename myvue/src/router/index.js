@@ -1,24 +1,24 @@
 import { createRouter,createWebHashHistory } from 'vue-router'
-import HomeB from '@/views/HomeB.vue'
+import Home from '@/views/Home.vue'
 
 
-import Computer from '@/components/Home/HomeB/Goods/Computer.vue'
-import HardWare from '@/components/Home/HomeB/Goods/HardWare.vue'
-import NetDevice from '@/components/Home/HomeB/Goods/NetDevice.vue'
-import Phone from '@/components/Home/HomeB/Goods/Phone.vue'
-import Television from '@/components/Home/HomeB/Goods/Television.vue'
+import Computer from '@/components/CenterBlock/CenterCom/Computer.vue'
+import HardWare from '@/components/CenterBlock/CenterCom/HardWare.vue'
+import NetDevice from '@/components/CenterBlock/CenterCom/NetDevice.vue'
+import Phone from '@/components/CenterBlock/CenterCom/Phone.vue'
+import Television from '@/components/CenterBlock/CenterCom/Television.vue'
 
 
 const routes = [
   {
     path: '/',
-    redirect:'/HomeB',
+    redirect:'/Home',
   },
   {
-    path: '/HomeB',
-    name: 'HomeB',
-    component: HomeB,
-    redirect:'/HomeB/Phone',
+    path: '/Home',
+    name: 'Home',
+    component: Home,
+    redirect:'/Home/Phone',
     children:[
         {
             path:'Computer',

@@ -1,8 +1,7 @@
 <template>
 <div class="home">
     <Top-bar></Top-bar>
-    <Nav-content ></Nav-content>
-
+    <Center-block ></Center-block>
     <Bottom-bar></Bottom-bar>
 
     
@@ -11,17 +10,18 @@
 
 
 <script>
-import TopBar from '@/components/Home/TopBar';
-import NavContent from '@/components/Home/HomeB/NavContent.vue';
-import BottomBar from '@/components/Home/BottomBar/FootB.vue'
+import TopBar from '@/components/TopBar';
+import CenterBlock from '@/components/CenterBlock/CenterBlock.vue';
+import BottomBar from '@/components/BottomBar'
 
 export default{
     name:'Home',
 
     components:{
         TopBar,
-        NavContent,
+        CenterBlock,
         BottomBar
+       
     }
 }
 // export default {
@@ -50,10 +50,5 @@ export default{
 
 
 <style scoped lang="scss">
-.home{
-        // background-color: #dffdff;
-
-}
-
 
 </style>

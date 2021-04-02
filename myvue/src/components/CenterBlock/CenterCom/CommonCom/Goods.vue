@@ -56,6 +56,7 @@
 
 <script>
 export default {
+    name:'Goods',
     props: ["num"],
     data() {
         return {

@@ -1,12 +1,12 @@
 <template>
-  <div class="navContent">
+  <div class="CenterBlock">
       <div class="nav">
-            <a class="homeA">home</a> 
-            <router-link class="phone" to="/HomeB/Phone">手机</router-link>
-            <router-link class="television" to="/HomeB/Television">电视</router-link>
-            <router-link class="computer" to="/HomeB/Computer">电脑</router-link>
-            <router-link class="hardware" to="/HomeB/HardWare">智能硬件</router-link>
-            <router-link class="netdevice" to="/HomeB/NetDevice">网络设备</router-link>
+            <a>home</a> 
+            <router-link class="phone" to="/Home/Phone">手机</router-link>
+            <router-link class="television" to="/Home/Television">电视</router-link>
+            <router-link class="computer" to="/Home/Computer">电脑</router-link>
+            <router-link class="hardware" to="/Home/HardWare">智能硬件</router-link>
+            <router-link class="netdevice" to="/Home/NetDevice">网络设备</router-link>
             <input type="text" class="search-text" placeholder="搜索">
             <button class="search-button">
                 <span></span>
@@ -18,18 +18,16 @@
 
 <script>
 export default {
-    name:'NavContent',
+    name:'CenterBlock',
     methods:{
-        // homeA(){
-        //     this.$router.replace('/homeA');
-        // }
+        
     }
 
 }
 </script>
 
 <style scoped lang="scss">
-.navContent{
+.CenterBlock{
     width:1300px;
     margin:auto;
         .nav {
