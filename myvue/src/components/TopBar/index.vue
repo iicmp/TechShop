@@ -1,14 +1,9 @@
 <template>
     <div class="top">
-        <!-- <span @click="login">登陆</span>
-        <span @click="register">注册</span>
-        <span @click="shopcart">购物车</span> -->
-        
-            <span >登陆</span>
-            <span>注册</span>
-            <span >购物车</span>
-      
-        
+        <span class="left" @click="goHome">home</span>
+        <span class="right registerBtn" @click="goRegister">注册</span>
+        <span class="right loginBtn" @click="goLogin">登陆</span>
+        <span class="right shopCartBtn" >购物车</span>  
     </div>
 </template>
 
@@ -16,13 +11,20 @@
 export default {
     name:"TopBar",
     methods:{
-        login() {
-　　　　　　　　　　// 假设登陆成功，则跳转到 index 组件
-                this.$router.replace('/Login');
+        goHome(){
+            this.$router.push({
+                path:'/Home/GoodsBlock/Phone'
+            })
         },
-        register() {
-　　　　　　　　　　// 假设登陆成功，则跳转到 index 组件
-                this.$router.replace('/Register');
+        goLogin() {
+            this.$router.push({
+                path:'/Home/LoginBlock/LoginCom'
+            })
+        },
+        goRegister() {
+　　　　　　　this.$router.push({
+                path:'/Home/LoginBlock/RegisterCom'
+            })
         },
         shopcart() {
 　　　　　　　　　　// 假设登陆成功，则跳转到 index 组件
@@ -38,10 +40,20 @@ export default {
     width: 1300px;
     margin:auto;
     background-color: #242933;
-     z-index: 1;
-    
-    
-    span{
+    z-index: 1;
+    .left{
+        float:left;
+        color:#b0b0b0;
+        font-size: 18px;
+        line-height: 40px;
+        margin-left: -70px;
+        z-index: 2;
+    }
+    .left:hover{
+        color:#fff;
+        cursor:pointer;
+    }
+    .right{
         float:right;
         color:#b0b0b0;
         font-size: 18px;
@@ -49,13 +61,13 @@ export default {
         margin-right: 20px;
         z-index: 2;
     }
-    span:first-child{
+    .right:first-child{
         margin-right: 80px;
     }
-    span:last-child{
+    .right:last-child{
         margin-right: 80px;
     }
-    span:hover{
+    .right:hover{
         color:#fff;
         cursor:pointer;
     }

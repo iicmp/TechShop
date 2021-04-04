@@ -1,19 +1,19 @@
 <template>
     <div class="netdevice">
         <Slides :index="5"></Slides>
-        <Goods :num="5"></Goods>
+        <All-goods :num="5"></All-goods>
        
     </div>
 </template>
 
 <script> 
-import Slides from "@/components/CenterBlock/CenterCom/CommonCom/Slides.vue";
-import Goods from "@/components/CenterBlock/CenterCom/CommonCom/Goods.vue";
+import Slides from "@/components/GoodsBlock/GoodsCom/CommonCom/Slides.vue";
+import AllGoods from "@/components/GoodsBlock/GoodsCom/CommonCom/AllGoods.vue";
 export default {
     name: "NetDevice",
     components: {
         Slides,
-        Goods
+        AllGoods
     },   
 };
 </script>

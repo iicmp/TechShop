@@ -5,9 +5,15 @@ export default createStore({
     state: {
         list: [],
         num: [],
-        test:['a','b','c']
+        isLoginBlock:false,
     },
     mutations: {
+        showLoginBlock(state){
+            console.log(4);
+            console.log(state.isLoginBlock);
+            state.isLoginBlock=true;
+            
+        },
         addList(state, goods) {
             console.log('------------',goods);
             if (state.list.length == 0) {
@@ -31,14 +37,9 @@ export default createStore({
             }
             console.log('list', state.list);
             console.log(state.num);
-        }
+        },
     },
     actions: {
-    },
-    getters:{
-        getlist(){
-            return state.list
-        }
     },
     modules: {
     }

@@ -1,30 +1,28 @@
 <template>
 <div class="home">
-    <div class="topbgc">
-
-    </div>
+    <div class="topbgc"></div>
     <Top-bar></Top-bar>
-    <Center-block ></Center-block>
-    <Bottom-bar></Bottom-bar>
-
-    
+    <router-view name="center"></router-view>
+    <router-view name="bottom"></router-view>
+      
 </div>  
 </template>
 
 
 <script>
 import TopBar from '@/components/TopBar';
-import CenterBlock from '@/components/CenterBlock/CenterBlock.vue';
-import BottomBar from '@/components/BottomBar'
 
 export default{
     name:'Home',
-
+    data(){
+        return{
+            
+        }
+    },
+    
     components:{
         TopBar,
-        CenterBlock,
-        BottomBar
-       
+        
     }
 }
 

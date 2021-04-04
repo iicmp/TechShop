@@ -10,7 +10,8 @@
 export default {
     name: "ShopCart",
     computed: {
-        goodsList() {console.log('this.$store.state.list', this.$store.state.list)
+        goodsList() {
+            console.log('this.$store.state.list', this.$store.state.list)
             return this.$store.state.list;
         },
         // // goodsNum() {
