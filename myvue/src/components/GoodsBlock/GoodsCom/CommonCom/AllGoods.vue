@@ -30,8 +30,6 @@
         
         <div class="block2">
             <p class="block2Title">全部商品</p>
-            
-
             <ul>
                 <li v-for="(item, index) in goods" :key="index">
                     <img :src="item && item.productImageBig" alt="" />
@@ -44,7 +42,7 @@
                         </p>
                         <p>
                             <span class="price">￥{{ item && item.salePrice }}</span>
-                            <button @click="addGoods">加入购物车</button>
+                            <button @click="addGoods(item.productId)">加入购物车</button>
                         </p>
                         
                     </div>
@@ -72,13 +70,10 @@ export default {
         };
     },
     methods: {
-        addGoodsA(num) {
-            console.log("--");
-            this.$store.commit("addList", this.goods[num]);
-        },
-        addGoods() {
-            console.log("--",this.goods[this.isShow]);
-            this.$store.commit("addList", this.goods[this.isShow]);
+        
+        addGoods(id) {
+            var 
+            
         },
     },
 
@@ -96,6 +91,8 @@ export default {
 
 <style scoped lang="scss">
 .block1 {
+    width:95%;
+    margin:auto;
     height: 900px;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 2px 2px 5px #9adafd, -2px 0px 5px #9adafd;
@@ -163,8 +160,12 @@ export default {
     }
 }
 .block2 {
-    margin-top: 100px;
+    width:95%;
+    margin:100px auto 0px auto;
+    
+    // margin-top: 100px;
     .block2Title{
+        
         font-size: 25px;
         color: #a0a0a0;
         border-bottom:3px solid  #76bdfb;  

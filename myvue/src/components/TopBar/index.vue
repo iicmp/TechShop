@@ -3,7 +3,7 @@
         <span class="left" @click="goHome">home</span>
         <span class="right registerBtn" @click="goRegister">注册</span>
         <span class="right loginBtn" @click="goLogin">登陆</span>
-        <span class="right shopCartBtn" >购物车</span>  
+        <span class="right shopCartBtn" @click="goShopCart">购物车</span>  
     </div>
 </template>
 
@@ -26,9 +26,10 @@ export default {
                 path:'/Home/LoginBlock/RegisterCom'
             })
         },
-        shopcart() {
-　　　　　　　　　　// 假设登陆成功，则跳转到 index 组件
-                this.$router.replace('/ShopCart');
+        goShopCart() {
+　　　　　　　this.$router.push({
+                path:'/Home/ShopCartBlock'
+            })
         },
     }
 }
@@ -37,16 +38,16 @@ export default {
 <style scoped lang="scss">
 .top{
     height:40px;
-    width: 1300px;
+    width: 1500px;
     margin:auto;
     background-color: #242933;
     z-index: 1;
     .left{
         float:left;
         color:#b0b0b0;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 40px;
-        margin-left: -70px;
+        margin-left: 30px;
         z-index: 2;
     }
     .left:hover{
@@ -61,9 +62,7 @@ export default {
         margin-right: 20px;
         z-index: 2;
     }
-    .right:first-child{
-        margin-right: 80px;
-    }
+    
     .right:last-child{
         margin-right: 80px;
     }

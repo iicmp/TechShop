@@ -2,17 +2,19 @@ import { createRouter,createWebHashHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 
 import GoodsBlock from '@/components/GoodsBlock/GoodsBlock.vue'
-import BottomBar from '@/components/BottomBar'
-import LoginBlock from '@/components/LoginBlock/LoginBlock.vue'
-
 import Computer from '@/components/GoodsBlock/GoodsCom/Computer.vue'
 import HardWare from '@/components/GoodsBlock/GoodsCom/HardWare.vue'
 import NetDevice from '@/components/GoodsBlock/GoodsCom/NetDevice.vue'
 import Phone from '@/components/GoodsBlock/GoodsCom/Phone.vue'
 import Television from '@/components/GoodsBlock/GoodsCom/Television.vue'
 
+import BottomBar from '@/components/BottomBar'
+
+import LoginBlock from '@/components/LoginBlock/LoginBlock.vue'
 import LoginCom from "@/components/LoginBlock/LoginCom.vue";
 import RegisterCom from "@/components/LoginBlock/RegisterCom.vue";
+
+import ShopCartBlock from '@/components/ShopCartBlock/ShopCartBlock.vue'
 
 
 const routes = [
@@ -78,11 +80,14 @@ const routes = [
                 
             ]
         },
-
-
-        
-        
-        
+        {
+            path:'ShopCartBlock',
+            
+            components:{
+                center:ShopCartBlock,   
+            },
+            
+        },  
     ]
   },
 ]
