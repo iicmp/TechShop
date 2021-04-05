@@ -4,47 +4,57 @@
             <div class="titlebar">精选</div>
             <div class="pic1">
                 <img :src="goods[0] && goods[0].productImageBig" alt="" />
-                <div  class="worddiv">
+                <div
+                    v-if="!(isShow == 0)"
+                    @mouseenter.native="showBtnA(0)"
+                    class="worddiv"
+                >
+                    <p class="price">￥{{ goods[0] && goods[0].salePrice }}</p>
                     <p class="name">{{ goods[0] && goods[0].productName }}</p>
                     <p class="title">{{ goods[0] && goods[0].subTitle }}</p>
-                    <p>
-                        <span class="price">￥{{ goods[0] && goods[0].salePrice }}</span>
-                        <button @click="addGoods(goods[0])">加入购物车</button>
-                    </p> 
+                </div>
+                <div v-else class="buttondiv" @mouseout.native="hideBtn">
+                    <button @click="addGoods">加入购物车</button>
                 </div>
             </div>
 
             <div class="pic2">
                 <img :src="goods[0] && goods[1].productImageBig" alt="" />
-                <div class="worddiv">
+                <div
+                    v-if="!(isShow === 1)"
+                    @mouseenter.native="showBtnA(1)"
+                    class="worddiv"
+                >
+                    <p class="price">￥{{ goods[0] && goods[1].salePrice }}</p>
                     <p class="name">{{ goods[0] && goods[1].productName }}</p>
                     <p class="title">{{ goods[0] && goods[1].subTitle }}</p>
-                    <p>
-                         <span class="price">￥{{ goods[0] && goods[1].salePrice }}</span>
-                         <button @click="addGoods(goods[1])">加入购物车</button>
-                    </p>
-                   
+                </div>
+                <div v-else class="buttondiv" @mouseleave.native="hideBtn">
+                    <button @click="addGoods">加入购物车</button>
                 </div>
             </div>
         </div>
-        
         <div class="block2">
-            <p class="block2Title">全部商品</p>
             <ul>
                 <li v-for="(item, index) in goods" :key="index">
                     <img :src="item && item.productImageBig" alt="" />
-                    <div>
+                    <div
+                        v-if="!(index === isShow)"
+                        @mouseenter.native="showBtn(index)"
+                        @mouseout="hideBtn"
+                    >
+                        <p class="price">
+                            <span>￥{{ item && item.salePrice }}</span>
+                        </p>
                         <p class="name">
                             <span>{{ item && item.productName }}</span>
                         </p>
                         <p class="title">
                             <span>{{ item && item.subTitle }}</span>
                         </p>
-                        <p>
-                            <span class="price">￥{{ item && item.salePrice }}</span>
-                            <button @click="addGoods(item)">加入购物车</button>
-                        </p>
-                        
+                    </div>
+                    <div v-else class="buttondiv" @mouseout="hideBtn">
+                        <button @click="addGoods">加入购物车</button>
                     </div>
                 </li>
             </ul>
@@ -54,7 +64,6 @@
 
 <script>
 export default {
-    name:'Goods',
     props: ["num"],
     data() {
         return {
@@ -70,9 +79,24 @@ export default {
         };
     },
     methods: {
-        
-        addGoods(item) {
-            this.$store.commit("addList", item);
+        showBtnA(num) {
+            this.isShow = num;
+        },
+
+        addGoodsA(num) {
+            console.log("--");
+            this.$store.commit("addList", this.goods[num]);
+        },
+
+        showBtn(index) {
+            this.isShow = index;
+        },
+        hideBtn() {
+            this.isShow = -1;
+        },
+        addGoods() {
+            console.log("--",this.goods[this.isShow]);
+            this.$store.commit("addList", this.goods[this.isShow]);
         },
     },
 
@@ -90,8 +114,6 @@ export default {
 
 <style scoped lang="scss">
 .block1 {
-    width:95%;
-    margin:auto;
     height: 900px;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 2px 2px 5px #9adafd, -2px 0px 5px #9adafd;
@@ -113,6 +135,7 @@ export default {
     .pic2 {
         width: 49%;
         overflow: hidden;
+
         img {
             display: block;
             margin: auto;
@@ -121,12 +144,39 @@ export default {
             width: 605px;
             height: 605px;
         }
-        
+        img:hover {
+            box-shadow: 5px 5px 10px #9adafd, -5px 0px 10px #9adafd;
+            transform: translateY(-10px);
+            transition: transform 0.5s;
+        }
+
+        .buttondiv {
+            width: 100%;
+            height:170px;
+            // background-color: blue;
+            
+            button {
+                width: 200px;
+                height: 50px;
+                margin-top: 50px;
+                border: 1px #76bdfb solid;
+                box-shadow: 1px 1px 5px #9adafd, -1px -1px 5px #9adafd;
+                background-color: #76bdfb;
+                color: #fff;
+                font-size: 20px;
+                margin-left: 200px;
+            }
+        }
         .worddiv {
             width:100%;
-            height:370px;
-            margin-top:-50px;
-            
+            height:170px;
+            // background-color: red;
+            .price {
+                color: #4169e1;
+                font-size: 30px;
+                font-weight: 600;
+                text-align: center;
+            }
             .name {
                 font-size: 25px;
                 text-align: center;
@@ -138,37 +188,14 @@ export default {
                 text-align: center;
                 color: #b0b0b0;
             }
-            .price {
-                color: #4169e1;
-                font-size: 30px;
-                font-weight: 600;
-                text-align: center;
-                margin-left:150px;
-            }
-            button {
-                width: 200px;
-                height: 50px;
-                border: 1px #76bdfb solid;
-                box-shadow: 1px 1px 5px #9adafd, -1px -1px 5px #9adafd;
-                background-color: #76bdfb;
-                color: #fff;
-                font-size: 20px;
-                margin-left:80px;
-            }
         }
     }
 }
 .block2 {
-    width:95%;
-    margin:100px auto 0px auto;
-    
-    // margin-top: 100px;
-    .block2Title{
-        
-        font-size: 25px;
-        color: #a0a0a0;
-        border-bottom:3px solid  #76bdfb;  
-    }
+    margin-top: 100px;
+    border-top: 3px solid #77befc;
+    padding-top: 15px;
+
     ul,
     li {
         padding: 0;
@@ -177,22 +204,39 @@ export default {
     }
     ul {
         // background-color: green;
-        height: 1400px;
+        height: 1000px;
         width: 100%;
-        background-color: lightblue;
 
         li {
             width: 25%;
             height: 480px;
             float: left;
-            div{
-                margin-top:-40px;
+            .buttondiv {
+                margin-top: 70px;
+                width: 100%;
+                button {
+                    width: 120px;
+                    height: 35px;
+                    border: 1px #76bdfb solid;
+                    box-shadow: 1px 1px 5px #9adafd, -1px -1px 5px #9adafd;
+                    background-color: #76bdfb;
+                    color: #fff;
+                    font-size: 16px;
+                    margin-left: 90px;
+                }
             }
+
             img {
                 // width: 98%;
                 text-align: center;
                 width: 318.5px;
                 height: 318.5px;
+            }
+            .price {
+                color: #4169e1;
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
             }
             .name {
                 text-align: center;
@@ -203,23 +247,6 @@ export default {
                 text-align: center;
                 color: #b0b0b0;
             }
-            .price {
-                color: #4169e1;
-                font-size: 20px;
-                font-weight: 600;
-                text-align: center;
-                margin-left:50px;
-            }
-            button {
-                width: 120px;
-                height: 35px;
-                border: 1px #76bdfb solid;
-                box-shadow: 1px 1px 5px #9adafd, -1px -1px 5px #9adafd;
-                background-color: #76bdfb;
-                color: #fff;
-                font-size: 16px;
-                margin-left:50px;  
-            }    
         }
         li:hover {
             box-shadow: 5px 5px 10px #9adafd, -5px -5px 10px #9adafd;

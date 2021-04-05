@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss">
 .LoginBlock{
-    width:1300px;
+    width:1400px;
     margin:40px auto 0 auto;
     .SwitchBar{
         width:150px;

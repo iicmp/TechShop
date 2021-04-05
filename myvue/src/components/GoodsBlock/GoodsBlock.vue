@@ -32,10 +32,10 @@ export default {
     methods: {
         fixNav() {
             var scrollY = document.documentElement.scrollTop;
-            if (scrollY > 40) {
+            if (scrollY > 0) {
                 let nav = document.querySelector(".nav");
                 nav.style.position = "fixed";
-                nav.style.top = "0px";
+                nav.style.top = "40px";
                 nav.style.backgroundColor = "#fff";
                 nav.style.zIndex = 3;
 
@@ -61,7 +61,7 @@ export default {
 .GoodsBlock {
     width: 1400px;
     margin: auto;
-    // background-color: blue;
+    
 
     .nav {
         
@@ -90,7 +90,7 @@ export default {
             color: #76bdfb;
         }
         .search-text {
-            margin-left: 190px;
+            margin-left: 150px;
             width: 200px;
             height: 43px;
             border-radius: 3px 0 0 3px;

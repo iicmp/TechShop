@@ -65,11 +65,10 @@ export default {
 
 <style scoped lang="scss">
 .foot {
-    position: absolute;
-    top: 3300px;
-    
-    width: 100%;
-    background-color: #fff;
+    background-color: lightgreen;
+    position: relative;
+    width: 2400px;
+    margin:auto;
     .hline {
         width:100%;
         height: 0.5px;
@@ -122,11 +121,10 @@ export default {
                 color:#76bdfb;
             }
             .first-row {
-                // margin-top: 20px;
-                // margin-bottom: 20px;
+                
                 margin:20px auto;
                 font-size:17px;
-                // color: black;
+                
             }
             .vline {
                 display: inline-block;
