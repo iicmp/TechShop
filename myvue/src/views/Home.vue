@@ -1,5 +1,8 @@
 <template>
 <div class="home">
+    <div id="test">
+        
+    </div>
     <Top-bar></Top-bar>
     <router-view name="center"></router-view>
     <!-- <router-view name="bottom"></router-view> -->

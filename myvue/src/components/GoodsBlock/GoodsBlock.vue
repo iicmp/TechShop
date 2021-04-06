@@ -1,7 +1,7 @@
 <template>
     <div class="GoodsBlock">
         <div class="nav">
-            <a>TechShop</a>
+            <a @click="goTop">TechShop</a>
             <router-link class="phone" to="/Home/GoodsBlock/Phone"
                 >手机</router-link
             >
@@ -50,6 +50,9 @@ export default {
                 
             }
         },
+        goTop(){
+            document.getElementById('test').scrollIntoView();
+        }
     },
     mounted() {
         addEventListener("scroll", this.fixNav, true);

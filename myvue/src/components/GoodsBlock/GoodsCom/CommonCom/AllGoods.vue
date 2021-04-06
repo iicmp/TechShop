@@ -179,7 +179,7 @@ export default {
         // background-color: green;
         height: 1400px;
         width: 100%;
-        background-color: lightblue;
+        
 
         li {
             width: 25%;

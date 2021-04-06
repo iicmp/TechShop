@@ -6,7 +6,7 @@
                 <table>
                     <tr>
                         <td style="width:100px">
-                            <input class="selectbox" type="checkbox">
+                            <input class="selectbox checkbox" @click="checkedToggle($event,index)" type="checkbox">
                         </td>
                         <td style="width:200px">
                             <img :src="item.productImageBig" alt="">
@@ -31,12 +31,12 @@
             <table style="border-top:3px solid #77befc">
                 <tr >
                     <td style="width:100px">
-                        <input type="checkbox" class="selectbox">
+                        <input type="checkbox" class="selectbox" @click="selectAll($event)">
                         <span style="font-size:25px">全选</span>
                     </td>
                     <td style="width:1050px;text-align:right;">
                         <span>总金额：</span>
-                        <span style="color:#77befc">79834789</span>
+                        <span style="color:#77befc">{{totalPrice}}</span>
                     </td>
                     <td style="width:150px;text-align:center;"><span class="paybox">付款</span></td>
                 </tr>
@@ -51,6 +51,11 @@
 <script>
 export default {
     name: "ShopCart",
+    data(){
+          return{
+            checkList:[]
+          } 
+    },
     computed: {
         goodsList() {
             console.log('this.$store.state.list', this.$store.state.list)
@@ -58,7 +63,16 @@ export default {
         },
         goodsNum() {
             return this.$store.state.num;
-        },  
+        },
+        totalPrice(){
+            var sum=0;
+            for(let i=0;i<this.goodsList.length;i++){
+                if(this.checkList[i]){
+                    sum+=this.goodsList[i].salePrice*this.goodsNum[i];
+                }
+            }
+            return sum;
+        },
     },
     methods:{
         addCount(index){
@@ -66,12 +80,33 @@ export default {
         },
         subCount(index){
             this.$store.commit("subNum",index)
+        },
+        
+        checkedToggle(checkObj,index){
+            this.checkList[index]=checkObj.target.checked;
+        },
+        selectAll(obj){
+            let checkboxList=document.querySelectorAll(".checkbox");
+            if(obj.target.checked){
+                for(let i=0;i<checkboxList.length;i++){
+                    checkboxList[i].checked=true;
+                    this.checkList[i]=checkboxList[i].checked;
+                }
+            }else{
+                for(let i=0;i<checkboxList.length;i++){
+                    checkboxList[i].checked=false;
+                    this.checkList[i]=checkboxList[i].checked;
+                }
+            }
         }
-
-    }
-
+            
+            
+            
+           
+            
+       
+    },
     
-  
 };
 </script>
 

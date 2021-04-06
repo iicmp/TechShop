@@ -1,5 +1,6 @@
 <template>
     <div id="homeA" @scroll="fixNav">
+        <div id="test"></div>
         <Top-bar></Top-bar>
         <selected></selected>
         <Bottom-bar></Bottom-bar>

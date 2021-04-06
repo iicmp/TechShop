@@ -32,11 +32,23 @@ export default createStore({
             }
             
         },
+        subListItem(state,index){
+            state.list.splice(index,1);
+        },
         addNum(state,index){
             state.num[index]++;
         },
         subNum(state,index){
-            state.num[index]--;
+            if(state.num[index]>1){
+                state.num[index]--;   
+            }else{
+                this.commit("subListItem",index);
+                this.commit("subNumItem",index);
+            }       
+             
+        },
+        subNumItem(index){
+            state.num.splice(index,1);
         }
     },
     actions: {
