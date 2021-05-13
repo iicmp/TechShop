@@ -5,6 +5,8 @@ export default createStore({
     state: {
         list: [],
         num: [],
+        isLogin:false,
+        currentUser:''
     },
     mutations: {
         addList(state, item) {
@@ -47,8 +49,14 @@ export default createStore({
             }       
              
         },
-        subNumItem(index){
+        subNumItem(state,index){
             state.num.splice(index,1);
+        },
+        setUser(state,username){
+            state.currentUser=username;
+        },
+        toggleLogin(state){
+            state.isLogin=!state.isLogin;
         }
     },
     actions: {

@@ -2,9 +2,13 @@
     <div class="topContainer">
         <div class="topBar">
             <span class="left" @click="goHome">home</span>
-            <span class="right registerBtn" @click="goRegister">注册</span>
-            <span class="right loginBtn" @click="goLogin">登陆</span>
-            <span class="right shopCartBtn" @click="goShopCart">购物车</span>  
+
+            <span class="right loginBtn" @click="goShopCart">购物车</span>
+            <span v-if="isLogin" class="right registerBtn" @click="logout()">注销</span>
+            <span v-else class="right registerBtn" @click="goRegister">注册</span>
+            <span v-if="isLogin" class="right shopCartBtn">{{currentUser}}</span>
+            <span v-else class="right shopCartBtn" @click="goLogin">登陆</span>  
+            
         </div>
     </div>
     
@@ -13,6 +17,14 @@
 <script>
 export default {
     name:"TopBar",
+    computed:{
+        isLogin(){
+            return this.$store.state.isLogin;
+        },
+        currentUser(){
+            return this.$store.state.currentUser
+        }
+    },
     methods:{
         goHome(){
             this.$router.push({
@@ -46,6 +58,10 @@ export default {
                 bar.style.position = "static";  
             }
         },
+        logout(){
+            this.$store.commit("setUser",'');
+            this.$store.commit("toggleLogin");
+        }
     },
     mounted() {
         addEventListener("scroll", this.fixBar, true);
@@ -86,14 +102,14 @@ export default {
         line-height: 40px;
         margin-right: 20px;
         z-index: 2;
-    }
-    
-    .right:last-child{
-        margin-right: 80px;
+    } 
+    .registerBtn{
+        margin-right:70px;
     }
     .right:hover{
         color:#fff;
         cursor:pointer;
     }
+    
 }
 </style>

@@ -70,7 +70,6 @@ export default {
         };
     },
     methods: {
-        
         addGoods(item) {
             this.$store.commit("addList", item);
         },
@@ -155,6 +154,17 @@ export default {
                 font-size: 20px;
                 margin-left:80px;
             }
+            button:active {
+                width: 200px;
+                height: 50px;
+                border: 1px #76bdfb solid;
+                box-shadow: 1px 1px 5px #9adafd, -1px -1px 5px #9adafd;
+                background-color: #76bdfb;
+                color: #fff;
+                font-size: 20px;
+                margin-left:80px;
+                opacity:0.5;
+            }
         }
     }
 }
@@ -219,6 +229,17 @@ export default {
                 color: #fff;
                 font-size: 16px;
                 margin-left:50px;  
+            }
+            button:active{
+                width: 120px;
+                height: 35px;
+                border: 1px #76bdfb solid;
+                box-shadow: 1px 1px 5px #9adafd, -1px -1px 5px #9adafd;
+                background-color: #76bdfb;
+                color: #fff;
+                font-size: 16px;
+                margin-left:50px;  
+                opacity:0.5;
             }    
         }
         li:hover {

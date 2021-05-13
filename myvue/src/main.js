@@ -3,19 +3,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import "@/assets/iconfont/iconfont.css"
-import ElementPlus from 'element-plus';
-import 'element-plus/lib/theme-chalk/index.css';
+import cookie from 'vue-cookie'
+import axios from 'axios'
 
-
-
-
-// Vue.config.productionTip=false
-// 挂载axios到vue的原型，由于继承性，所有的组件都可以使用this.$http
-import axios from 'axios';
-// Vue.prototype.$http=axios;
-let app = createApp(App)// 获取应用实例
+let app = createApp(App)
 app.config.globalProperties.$http=axios
-axios.defaults.baseURL='http://59.110.225.36:3000';
+axios.defaults.baseURL='http://localhost:3000';
 
-app.use(ElementPlus)
+app.config.globalProperties.$cookie=cookie
+
 app.use(store).use(router).mount('#app')

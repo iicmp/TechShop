@@ -58,7 +58,6 @@ export default {
     },
     computed: {
         goodsList() {
-            console.log('this.$store.state.list', this.$store.state.list)
             return this.$store.state.list;
         },
         goodsNum() {
